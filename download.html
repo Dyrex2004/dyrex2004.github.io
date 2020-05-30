@@ -41,11 +41,25 @@
         <div class="main-content-wrapper">
             <a class="main-heading">BICPR</a>
             <p class="main-tagline"><span class="red">B</span>est <span class="red">I</span>mproved <span class="red">C</span>herry-<span class="red">p</span>ick <span class="red">R</span>om</p>
+            <h1 class="main-content-heading">
+                <span class="red">D</span>OWNLOAD
+            </h1>
+            <div class="disclaimer-top animated fadeInUp fast">
+                <h1>DISCLAIMER</h1> 
+                <a>Done wrong, flashing a ROM can possibly brick your device or even break it! we are not responsible for bricked devices, thermonuclear war, or you getting fired because the alarm app failed. Please do some research if you have any concerns about features included in this ROM before flashing it! YOU are choosing to make these modifications, and if you point the finger at us for messing up your device, we will laugh at you.</a>                  
+            </div>
 
+            <div class="download-list-wrapper">
+                <input type="text" id="downloadSearchInput" onkeyup="downloadListFunction()" placeholder="Search for device..">
 
-            
-            <p class="main-content-footer">© 2020 BICPR</p>
+                <ul id="downloadList">
+                <li><a href="#">Xiaomi Mi 9</a></li>
+                <li><a href="#">Redmi Note 7 Pro</a></li>
+
+                </ul>                
+            </div>
         </div>
     </section>
+    <script src="js/downloadList.js"></script>
 </body>
 </html>

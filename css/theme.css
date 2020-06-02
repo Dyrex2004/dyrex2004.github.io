@@ -163,19 +163,34 @@ body {
 .disclaimer-top>a {
     font-family: 'Roboto',sans-serif;
 }
-
 .download-list-wrapper{
     margin-top: 20px;
 }
 .teamleader-wrapper {
     background-color: var(--color-background-elevated);
+    margin-top: 20px;
     width: 260px;
     text-align: center;
+    border-radius: 30px;
+    margin-right: 20px;
+    float: left;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
 }
 .teamleader-wrapper>img{
     width: 200px;
     height: 200px;
-    margin: 30px;
+    margin: 20px 20px 10px 20px;
+    border-radius: 20px;
+}
+.teamleader-wrapper>a{
+    font-size: larger;
+    margin-bottom: 20px;
+}
+.teamleader-wrapper>p{
+    font-family: 'Roboto',sans-serif;
+    font-weight: 400;
+    padding-bottom: 20px;
+    padding-top: 10px;
 }
 
 /*Soon*/

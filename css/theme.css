@@ -1,10 +1,10 @@
 :root {
-    --nav-left-width: 130px; /*calc(8vw + .25vw);*/
+    --nav-bar-width: 130px; /*calc(8vw + .25vw);*/
     --color-background-main: #121212;
     --color-background-elevated: #212121;
     --color-background-even-more-elevated: #303030;  
     --color-accent: #f44336;
-    --main-content-width: calc(100vw - var(--nav-left-width));
+    --main-content-width: calc(100vw - var(--nav-bar-width));
 }
 ::-moz-selection { 
     color: var(--color-accent);
@@ -19,65 +19,66 @@ body {
     background-color: var(--color-background-main);
     font-family: "Red Hat Display", "Roboto", sans-serif;
     color: white;
+    overflow-x: hidden;
 }
 .red {
     color: var(--color-accent);
 }
-.nav-left {
+.nav-bar {
     height: 100vh;
-    width: var(--nav-left-width);
+    width: var(--nav-bar-width);
     position: fixed;
     background-color: var(--color-background-elevated);
 }
-.nav-left-header {
+.nav-bar-header {
     width: 100%;
-    height: var(--nav-left-width);
+    height: var(--nav-bar-width);
     display: block;
     text-align:center
 }
-.nav-left-header-image {
+.nav-bar-header-image {
     transform: translateY(25px);
 }
-.nav-left-buttonlist {
-    width: var(--nav-left-width);
+.nav-bar-buttonlist {
+    width: var(--nav-bar-width);
     display: block;
 }
-.nav-left-buttonlist>li {
+.nav-bar-buttonlist>li {
     height: 48px;
     display: block;
     transition: 700ms cubic-bezier(0.215, 0.610, 0.355, 1);
 }
-.nav-left-buttonlist>li:hover {
+.nav-bar-buttonlist>li:hover {
     background-color: var(--color-background-even-more-elevated);
 }
-.nav-left-buttonlist>li>a {
+.nav-bar-buttonlist>li>a {
     color: white;
     line-height: 48px;
     display: block;
     text-align: center;
     height: 48px;
 }
-.nav-left-buttonlist>li>a>i {
+.nav-bar-buttonlist>li>a>i {
     line-height: 48px;
 }
-.nav-left-footer-button {
+.nav-bar-footer-button {
     color: white;
-    line-height: var(--nav-left-width);
+    line-height: var(--nav-bar-width);
     padding: 3px;
 }
-.nav-left-footer {
-    width: var(--nav-left-width);
-    height: var(--nav-left-width);
+.nav-bar-footer {
+    width: var(--nav-bar-width);
+    height: var(--nav-bar-width);
     position: absolute;
     bottom: 0;
 }
-.nav-left-buttonlist-active {
+.nav-bar-buttonlist-active {
     background-color: rgba(244,67,54 ,0.3);
 }
-.nav-left-buttonlist-active>a>i {
+.nav-bar-buttonlist-active>a>i {
     color: var(--color-accent);
 }
-.nav-left-footer-button-section {
+.nav-bar-footer-button-section {
     text-align: center;
     position: relative;  
 }
@@ -85,13 +86,12 @@ body {
     float: right;
     height: 100vh;
     width: var(--main-content-width);
-    margin-left: var(--nav-left-width);
+    margin-left: var(--nav-bar-width);
 }
 .main-content-wrapper {
-    width: calc(100vw - var(--nav-left-width) - var(--nav-left-width) - var(--nav-left-width));
+    width: calc(100vw - var(--nav-bar-width) - var(--nav-bar-width) - var(--nav-bar-width));
     margin-left: 7.5vw;
-    height: calc(100vh - 2 x var(--nav-left-width));
-    margin-top: calc(var(--nav-left-width) / 2);
+    margin-top: calc(var(--nav-bar-width) / 2);
 }
 .main-heading {
     font-size: 80px;
@@ -192,8 +192,92 @@ body {
     padding-bottom: 20px;
     padding-top: 10px;
 }
-
 /*Soon*/
-@media (max-width: 1500px) {
+@media (max-width: 600px) {
+    :root {
+        --main-content-width: 90vw;
+        --nav-bar-height-mobile: 50px;
+        --nav-bar-button-width: 20vw;
+    }
+    .main-content-wrapper {
+        width: var(--main-content-width);
+        margin-left: 5vw;
+        margin-top: 3vh;
+    }
+    .main-content {
+        float: left;
+        height: auto;
+        min-height: 100vh;
+        width: var(--main-content-width);
+        padding-bottom: calc(20px + var(--nav-bar-height-mobile));
+        margin-left: 0px;
+    }
+    .main-heading {
+        font-size: 40px;
+    }
+    .main-content-heading {
+        font-size: 20px;
+    }
+    .main-content-subheading {
+        font-size: 14px;
+        line-height: 20px;
+    }
+    .main-tagline {
+        font-size: 0px;
+        margin-bottom: 20px;
+    }
+    .nav-bar {
+        height: var(--nav-bar-height-mobile);
+        width: 100vw;
+        bottom: 0px;
+        position: fixed;
+    }
+    .nav-bar-header {
+        display: none
+    }
+    .nav-bar-buttonlist {
+        width: 100vw;
+    }
+    .nav-bar-buttonlist>li {
+        height: var(--nav-bar-height-mobile);
+        width: var(--nav-bar-button-width);
+        float: left;
+    }
+    .nav-bar-footer {
+        display: none;
+    }
+    .disclaimer-top {
+        padding-left: 15px;
+    }
+    .disclaimer-top>a{
+        font-size: 14px;
+        line-height: 14px;
+    }
+    .main-landing-quote {
+        font-size: 14px;
+        line-height: 20px;
+    }
+    .landing-button-list {
+        margin: 30px 0px;
+    }
+    .landing-button-list>li {
+        margin: 30px 0px;
+    }
+    .landing-button-list>li>a{
+        padding: 8px 15px;
+    }
 
+    #downloadSearchInput {
+        font-size: 14px; 
+        padding: 12px 0px 12px 0px; 
+    }
+    #downloadSearchInput:hover, #downloadSearchInput:focus {
+        background-color: var(--color-background-main);
+    }
+    #downloadList li a {
+        padding: 12px 0px 12px 0px; 
+    }
+    #downloadList li a:hover:not(.header) {
+        background-color: var(--color-background-main);
+    }
 }

@@ -1,2 +1,2 @@
 # BICPR WEBSITE
-## http://bicpr.cf
+## https://bicpr.cf

@@ -1,9 +1,10 @@
 :root {
     --nav-bar-width: 130px; /*calc(8vw + .25vw);*/
-    --color-background-main: #121212;
-    --color-background-elevated: #212121;
+    --color-background-main: #0E0E10;
+    --color-background-elevated: rgb(22, 22, 22);
+    --button-outline: rgba(255, 255, 255, 0.1);
     --color-background-even-more-elevated: #303030;  
-    --color-accent: #f44336;
+    --color-accent: #5A88FF;
     --main-content-width: calc(100vw - var(--nav-bar-width));
 }
 ::-moz-selection { 
@@ -17,11 +18,11 @@
 
 body {
     background-color: var(--color-background-main);
-    font-family: "Red Hat Display", "Roboto", sans-serif;
+    font-family: "Poppins", "Roboto", sans-serif;
     color: white;
     overflow-x: hidden;
 }
-.red {
+.accented {
     color: var(--color-accent);
 }
 .nav-bar {
@@ -34,10 +35,11 @@ body {
     width: 100%;
     height: var(--nav-bar-width);
     display: block;
-    text-align:center
-}
-.nav-bar-header-image {
-    transform: translateY(25px);
+    text-align:center;
+    background: url(../res/icon.svg);
+    background-repeat: no-repeat;
+    background-size: 64px;
+    background-position: center;  
 }
 .nav-bar-buttonlist {
     width: var(--nav-bar-width);
@@ -73,7 +75,7 @@ body {
     bottom: 0;
 }
 .nav-bar-buttonlist-active {
-    background-color: rgba(244,67,54 ,0.3);
+    background-color: #5a89ff5d;
 }
 .nav-bar-buttonlist-active>a>i {
     color: var(--color-accent);
@@ -101,6 +103,7 @@ body {
     font-size: 16px;
     padding-left: 3px;
     margin-bottom: 60px;
+    opacity: 0;
 }
 .main-landing-quote {
     font-size: 17px;
@@ -119,14 +122,14 @@ body {
     font-weight: 500;
     text-decoration: none;
     padding: 10px 20px;
-    border: 2px solid var(--color-background-elevated);
-    border-radius: 30px;
+    border: 2px solid var(--button-outline);
+    border-radius: 8px;
     transition: 700ms cubic-bezier(0.215, 0.610, 0.355, 1);
     font-family: 'Roboto', sans-serif;
 }
 .landing-button-list>li>a:hover{
-    background-color: rgba(244,67,54 ,0.3);
-    border: 2px solid rgba(244,67,54 ,0.3);
+    background-color: #5a89ff5d;
+    border: 2px solid  #5a89ff5d;
 }
 .landing-button-tooltip {
     margin-left: 0px;
@@ -163,9 +166,7 @@ body {
 .disclaimer-top>a {
     font-family: 'Roboto',sans-serif;
 }
-.download-list-wrapper{
-    margin-top: 20px;
-}
+
 .teamleader-wrapper {
     background-color: var(--color-background-elevated);
     margin-top: 20px;
@@ -200,7 +201,7 @@ body {
     :root {
         --main-content-width: 90vw;
         --nav-bar-height-mobile: 50px;
-        --nav-bar-button-width: 20vw;
+        --nav-bar-button-width: 25vw;
     }
     .main-content-wrapper {
         width: var(--main-content-width);
@@ -268,22 +269,5 @@ body {
     }
     .landing-button-list>li>a{
         padding: 8px 15px;
-    }
-    .perfundo__image {
-        height: 40vh;
-        padding-top: 30vh; 
-    }
-    #downloadSearchInput {
-        font-size: 14px; 
-        padding: 12px 0px 12px 0px; 
-    }
-    #downloadSearchInput:hover, #downloadSearchInput:focus {
-        background-color: var(--color-background-main);
-    }
-    #downloadList li a {
-        padding: 12px 0px 12px 0px; 
-    }
-    #downloadList li a:hover:not(.header) {
-        background-color: var(--color-background-main);
     }
 }

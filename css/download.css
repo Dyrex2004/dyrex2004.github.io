@@ -1,0 +1,48 @@
+.download-frame {
+    transition: 300ms cubic-bezier(0.215, 0.610, 0.355, 1);
+    width: calc(100% - 28px);
+    border: 2px solid var(--button-outline);
+    border-radius: 16px;
+    margin-top: 24px;
+    padding: 14px;
+}
+.download-titles {
+    font-size: 1.0em;
+    font-weight: 600;
+}
+.download-tips {
+    font-family: "Roboto Mono", sans-serif;
+    opacity: 0.7;
+    font-size: 0.8em;
+}
+#download-button {
+    width: 100%;
+    background: none;
+    border: 2px solid var(--button-outline);
+    border-radius: 8px;
+    color: var(--color-accent);
+    margin-top: 16px;
+    height: 48px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+}
+#download-button:hover {
+    cursor: pointer;
+}
+
+#download-sha1sum {
+    transition: 300ms cubic-bezier(0.215, 0.610, 0.355, 1);
+    color: #ffffff;
+}
+#download-sha1sum:hover {
+    cursor: pointer;
+    color: var(--color-accent);
+}
+@media (max-width: 600px) {
+    @media (max-width: 600px) {
+        :root {
+            --nav-bar-button-width: 20vw;
+        }
+    }
+}

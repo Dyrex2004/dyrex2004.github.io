@@ -75,7 +75,7 @@ body {
     bottom: 0;
 }
 .nav-bar-buttonlist-active {
-    background-color: #5a89ff5d;
+    background-color: rgba(90, 137, 255, 0.2);
 }
 .nav-bar-buttonlist-active>a>i {
     color: var(--color-accent);
@@ -128,8 +128,8 @@ body {
     font-family: 'Roboto', sans-serif;
 }
 .landing-button-list>li>a:hover{
-    background-color: #5a89ff5d;
-    border: 2px solid  #5a89ff5d;
+    background-color: rgba(90, 137, 255, 0.2);
+    border: 2px solid  rgba(90, 137, 255, 0.6);
 }
 .landing-button-tooltip {
     margin-left: 0px;
@@ -165,36 +165,6 @@ body {
 
 .disclaimer-top>a {
     font-family: 'Roboto',sans-serif;
-}
-
-.teamleader-wrapper {
-    background-color: var(--color-background-elevated);
-    margin-top: 20px;
-    width: 260px;
-    text-align: center;
-    border-radius: 30px;
-    margin-right: 20px;
-    float: left;
-    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
-}
-.teamleader-wrapper>img{
-    width: 200px;
-    height: 200px;
-    margin: 20px 20px 10px 20px;
-    border-radius: 20px;
-}
-.teamleader-wrapper>a{
-    font-size: larger;
-    margin-bottom: 20px;
-}
-.teamleader-wrapper>p{
-    font-family: 'Roboto',sans-serif;
-    font-weight: 400;
-    padding-bottom: 20px;
-    padding-top: 10px;
-}
-.perfundo__link>img{
-    height: 200px
 }
 
 @media (max-width: 600px) {

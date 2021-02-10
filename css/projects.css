@@ -33,7 +33,7 @@
 }
 @media (max-width: 600px) {
     .projects-single {
-        width: calc(100% - 28px);
+        width: calc(100% - 32px);
         border: 2px solid var(--button-outline);
         border-radius: 16px;
         margin-top: 24px;

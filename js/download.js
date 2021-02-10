@@ -1,12 +1,14 @@
+var jsonUrl = "https://raw.githubusercontent.com/elluzion/infra/main/download/" + getProjectID() + ".json";
+
 function onLoad() {
     urlHasMeta();
     if (getProjectType() != "rom") {
         $(".disclaimer-top").remove();
     }
     fillContent();
+    fetchChangelog();
 }
 function fillContent() {
-    var jsonUrl = "https://raw.githubusercontent.com/elluzion/infra/main/download/" + getProjectID() + ".json";
     $.getJSON(jsonUrl, { get_param: 'value' }, function(data) {
         $.each(data, function(index, element) {
             $("#download-title").html(element.name);
@@ -16,10 +18,8 @@ function fillContent() {
         });
     });
     $("#download-type").html(getProjectType());
-
 }
 function showSha1Sum() {
-    var jsonUrl = "https://raw.githubusercontent.com/elluzion/infra/main/download/" + getProjectID() + ".json";
     $.getJSON(jsonUrl, { get_param: 'value' }, function(data) {
         $.each(data, function(index, element) {
            alert(element.sha1sum);
@@ -27,11 +27,17 @@ function showSha1Sum() {
     });
 }
 function openDlLink() {
-    var jsonUrl = "https://raw.githubusercontent.com/elluzion/infra/main/download/" + getProjectID() + ".json";
     $.getJSON(jsonUrl, { get_param: 'value' }, function(data) {
         $.each(data, function(index, element) {
             window.location.replace(element.link);
         });
+    });
+}
+function fetchChangelog() {
+    $.get('https://raw.githubusercontent.com/elluzion/infra/main/changelogs/' + getProjectID() + ".txt", function(data) {
+        var formatted = data.replaceAll("- ", '<br class="changelog-linebreak">- ')
+        $(".changelog-summary").html(formatted);
+        $(".changelog-linebreak:first").remove();
     });
 }
 function getProjectID() {

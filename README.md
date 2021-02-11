@@ -1,2 +1,1 @@
-# elluzion WEBSITE
-## https://bicpr.cf
+Elluzion website

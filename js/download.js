@@ -14,7 +14,9 @@ function fillContent() {
             $("#download-title").html(element.name);
             $("#download-version").html(element.version);
             $("#download-filename").html(element.filename);
-            $("#download-date").html(element.date);
+            $("#download-date").html(
+                moment(element.date, "DD-MM-YYYY")
+                .format("MMMM Do YYYY"));
         });
     });
     $("#download-type").html(getProjectType());

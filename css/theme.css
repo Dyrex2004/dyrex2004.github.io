@@ -25,6 +25,9 @@ body {
 .accented {
     color: var(--color-accent);
 }
+.weight-500 {
+    font-weight: 500;
+}
 .nav-bar {
     height: 100vh;
     width: var(--nav-bar-width);
